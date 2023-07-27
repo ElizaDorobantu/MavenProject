@@ -10,7 +10,7 @@ public class DBConnection {
 		Connection conn = null;
 		
 		try {
-			conn = DriverManager.getConnection(null, null, null);
+			conn = DriverManager.getConnection(url, user, pass);
 			System.out.println("Conexiune cu succes!");
 		}
 		catch (SQLException e) {

@@ -13,6 +13,9 @@ public static List<String> dbSelectQuery(Connection conn, String query){
 	try {
 		Statement statement = conn.createStatement();
 		ResultSet result = statement.executeQuery(query);
+		
+		while(result.next()) {
+			resultList.add(result.getString(5));}
 	}
 	catch(SQLException e) {
 		System.out.println("Nu am putut executa query-ul!");
